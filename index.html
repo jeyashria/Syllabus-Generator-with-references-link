@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Syllabus Generator</h1>
+        <p>Select a subject to view the syllabus:</p>
+        <form method="post" action="/select_subject">
+            <label for="subject">Select Subject:</label>
+            <select name="subject" id="subject" required>
+                <option value="ai">Artificial Intelligence</option>
+                <option value="ml">Machine Learning</option>
+                <option value="nlp">Natural Language Processing</option>
+            </select>
+            <button type="submit">Generate Syllabus</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ subject }} Syllabus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ subject }} Syllabus</h1>
+        <ul>
+            {% for topic in syllabus %}
+                <li>{{ topic }}</li>
+            {% endfor %}
+        </ul>
+       <!-- Replace 'full_syllabus' with 'generate_syllabus' in the href attribute -->
+<a href="{{ url_for('generate_syllabus', subject=subject) }}">View Full Syllabus</a>
+
+    </div>
+</body>
+</html>
